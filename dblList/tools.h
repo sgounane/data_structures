@@ -20,11 +20,11 @@ void printDblList(DblList head){
         temp=temp->next;
     }
 }
-void insert(DblList head, Node *newNode){
-    if(head==NULL) head=newNode;
+void insert(DblList *head, Node *newNode){
+    if(head==NULL) *head=newNode;
     else{
-        newNode->next=head;
-        head->prev=newNode;
-        head=newNode;
+        newNode->next=*head;
+        (*head)->prev=newNode;
+        *head=newNode;
     }
 }

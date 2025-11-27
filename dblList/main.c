@@ -3,8 +3,8 @@
 int main(){
     DblList head = NULL;
 
-    insert(head,getNode(5));
-    insert(head,getNode(7));
+    insert(&head,getNode(5));
+    insert(&head,getNode(7));
     printDblList(head);
 }
 
