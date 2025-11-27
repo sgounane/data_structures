@@ -21,11 +21,26 @@ void printDblList(DblList head){
     }
     printf("\n");
 }
-void insert(DblList *head, Node *newNode){
-    if(*head==NULL) *head=newNode;
+void insert(DblList *phead, Node *newNode){
+    if(*phead==NULL) *phead=newNode;
     else{
-        newNode->next=*head;
-        (*head)->prev=newNode;
-        *head=newNode;
+        newNode->next=*phead;
+        (*phead)->prev=newNode;
+        *phead=newNode;
+    }
+}
+
+void deleteNode(DblList *phead, Node *node){
+    if(*phead==NULL) {
+        printf("La list est vide ...\n");
+        return;
+    }
+    Node * tmp=*phead;
+    while(tmp!=NULL){
+        if(tmp->data==node->data){
+         //delete element
+          return;  
+        }
+        tmp=tmp->next;
     }
 }
