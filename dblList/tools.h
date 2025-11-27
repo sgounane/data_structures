@@ -16,12 +16,13 @@ Node * getNode(int v){
 void printDblList(DblList head){
     Node *temp=head;
     while(temp!=NULL) {
-        printf("%d", temp->data);
+        printf("%d -> ", temp->data);
         temp=temp->next;
     }
+    printf("\n");
 }
 void insert(DblList *head, Node *newNode){
-    if(head==NULL) *head=newNode;
+    if(*head==NULL) *head=newNode;
     else{
         newNode->next=*head;
         (*head)->prev=newNode;
