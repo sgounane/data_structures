@@ -21,13 +21,24 @@ void printDblList(DblList head){
     }
     printf("\n");
 }
-void insert(DblList *phead, Node *newNode){
+void insertHead(DblList *phead, Node *newNode){
     if(*phead==NULL) *phead=newNode;
     else{
         newNode->next=*phead;
         (*phead)->prev=newNode;
         *phead=newNode;
     }
+}
+void inserttail(DblList *phead, Node *newNode){
+    Node *tmp=*phead;
+    if(*phead==NULL) *phead=newNode;
+    else{
+        while (tmp->next!=NULL) tmp=tmp->next;
+        tmp->next=newNode;
+        newNode->prev=tmp;
+        
+    }
+
 }
 
 void deleteNode(DblList *phead, Node *node){
@@ -43,4 +54,26 @@ void deleteNode(DblList *phead, Node *node){
         }
         tmp=tmp->next;
     }
+}
+DblList copy(DblList head){
+    Node *newHead=NULL;
+    if(head!=NULL){
+        Node * tmp=head;
+        while(tmp!=NULL){
+            inserttail(&newHead,getNode(tmp->data));
+            tmp=tmp->next;
+        }
+    }
+    return newHead;
+}
+DblList revers(DblList head){
+    Node *newHead=NULL;
+    if(head!=NULL){
+        Node * tmp=head;
+        while(tmp!=NULL){
+            insertHead(&newHead,getNode(tmp->data));
+            tmp=tmp->next;
+        }
+    }
+    return newHead;
 }

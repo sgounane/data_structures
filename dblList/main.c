@@ -2,10 +2,18 @@
 #include "tools.h"
 int main(){
     DblList head = NULL;
-    insert(&head,getNode(5));
-    //insert(&head,getNode(7));
-    //insert(&head,getNode(4));
-    //printDblList(head);
-    deleteNode(&head,getNode(4));
+    inserttail(&head,getNode(140));
+    printDblList(head);
+    insertHead(&head,getNode(5));
+    printDblList(head);
+    insertHead(&head,getNode(7));
+    printDblList(head);
+    insertHead(&head,getNode(4));
+    printDblList(head);
+    inserttail(&head,getNode(14));
+    printDblList(head);
+    //deleteNode(&head,getNode(4));
+    DblList cp=revers(head);
+    printDblList(cp);
 }
 
