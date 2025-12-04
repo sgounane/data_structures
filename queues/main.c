@@ -25,11 +25,11 @@ void dequeue(Queue *f){
 
 int main(){
     Queue f;
-    initFile(&f);
-    enfiler(&f,4);
-    enfiler(&f,9);
-    enfiler(&f,3);
-    enfiler(&f,1);
-    printFile()
+    initQueue(&f);
+    enqueue(&f,4);
+    enqueue(&f,9);
+    enqueue(&f,3);
+    enqueue(&f,1);
+    printQueue(f);
     return 0;
 }
