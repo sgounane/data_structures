@@ -12,7 +12,7 @@ typedef struct link{
       struct link * next;
 } Link_t;
 
-typedef struct List{
+typedef struct List_t{
       Link_t *head;
       int size;
 } List_t;
