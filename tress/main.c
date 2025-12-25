@@ -31,8 +31,10 @@ int main(){
     A->les_noeuds[5].nd=-1;
 
     A->les_noeuds[6].val=9;
-    A->les_noeuds[6].ng=6;
+    A->les_noeuds[6].ng=-1;
     A->les_noeuds[6].nd=-1;
+
+    A->nb_noeuds=7;
 
     return 0;
 }
