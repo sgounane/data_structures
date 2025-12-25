@@ -1,0 +1,35 @@
+----------test pour un file vide--------------
+getNext: La file est vide !!!
+----------Inserer des elements a la queue puis affichage--------------
+Id : 1
+Name : Said
+Solde : 90
+Id : 2
+Name : Reda
+Solde : 100
+Id : 3
+Name : Mohammed
+Solde : 201
+List size: 3 
+<-[1 Said 90.000000]<-[2 Reda 100.000000]<-[3 Mohammed 201.000000]
+------------recupérer un élément de la téte de la file--------------
+[Said 90.000000]
+List size: 2 
+<-[2 Reda 100.000000]<-[3 Mohammed 201.000000]
+----------------Inserer un nouvel elements a la queue puis affichage--------------
+Id : 4
+Name : Hanane
+Solde : 190
+List size: 3 
+<-[2 Reda 100.000000]<-[3 Mohammed 201.000000]<-[4 Hanane 190.000000]
+----------------récupération de tous les élément de la liste--------------
+[Reda 100.000000]
+List size: 2 
+<-[3 Mohammed 201.000000]<-[4 Hanane 190.000000]
+[Mohammed 201.000000]
+List size: 1 
+<-[4 Hanane 190.000000]
+[Hanane 190.000000]
+List size: 0 
+
+getNext: La file est vide !!!
